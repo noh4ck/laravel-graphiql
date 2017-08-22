@@ -25,11 +25,22 @@ class PublishCommand extends Command
      *
      * @return void
      */
-    public function fire()
+    public function handle()
     {
         $this->info('Publishing all files');
         $this->call('vendor:publish', [
             '--provider' => 'Graphiql\GraphiqlServiceProvider',
         ]);
+    }
+
+    /**
+     * Execute the console command.
+     *
+     * @deprecated
+     * @return void
+     */
+    public function fire()
+    {
+        $this->handle();
     }
 }
