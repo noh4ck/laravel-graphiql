@@ -18,11 +18,14 @@ return [
         'graphql' => 'graphql',
 
         // Path to the graphiql ui
-        'ui' => 'graphql-ui'
+        'ui' => 'graphql-ui',
+
+        // Any middleware for the graphiql ui route
+        'middleware' => [],
     ],
 
     'headers' => [
         'Accept' => 'application/json',
-        'Content-Type' => 'application/json'
+        'Content-Type' => 'application/json',
     ],
 ];

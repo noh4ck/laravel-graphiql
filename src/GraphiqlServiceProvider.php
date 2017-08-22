@@ -37,6 +37,7 @@ class GraphiqlServiceProvider extends ServiceProvider
         \Route::group(['namespace' => 'Graphiql'], function ($router) {
             $router->get(config('graphiql.routes.ui'), [
                 'as' => 'graphiql',
+                'middleware' => config('graphiql.routes.middleware', []),
                 'uses' => '\Graphiql\Http\Controllers\GraphiqlController@index',
             ]);
         });
