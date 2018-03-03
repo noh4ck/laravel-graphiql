@@ -54,9 +54,9 @@
   <script>window.React || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react.min.js">\x3C/script>')</script>
   {{--<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>--}}
   <script>window.ReactDOM || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react-dom.min.js">\x3C/script>')</script>
-  <script src="//unpkg.com/subscriptions-transport-ws@0.5.4/browser/client.js"></script>
+  {{--<script src="//unpkg.com/subscriptions-transport-ws@0.5.4/browser/client.js"></script>--}}
   <script>window.SubscriptionsTransportWs || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/subscriptions.js">\x3C/script>')</script>
-  <script src="//unpkg.com/graphiql-subscriptions-fetcher@0.0.2/browser/client.js"></script>
+  {{--<script src="//unpkg.com/graphiql-subscriptions-fetcher@0.0.2/browser/client.js"></script>--}}
   <script>window.GraphiQLSubscriptionsFetcher || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/graphiql-subscriptions.js">\x3C/script>')</script>
 
   <script src="{{config('graphiql.paths.assets_public')}}/graphiql.js"></script>
