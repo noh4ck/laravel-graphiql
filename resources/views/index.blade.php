@@ -52,6 +52,10 @@
   <script>window.React || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react-15.0.1.min.js">\x3C/script>')</script>
   <!-- <script src="//cdn.jsdelivr.net/react/15.0.1/react&#45;dom.min.js"></script> -->
   <script>window.ReactDOM || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react-dom-15.0.1.min.js">\x3C/script>')</script>
+
+  <script src="//unpkg.com/subscriptions-transport-ws@0.5.4/browser/client.js"></script>
+  <script src="//unpkg.com/graphiql-subscriptions-fetcher@0.0.2/browser/client.js"></script>
+
   <script src="{{config('graphiql.paths.assets_public')}}/graphiql.js"></script>
 </head>
 <body>
@@ -158,6 +162,12 @@
             }
         });
     }
+
+    var subscriptionsClient = new window.SubscriptionsTransportWs.SubscriptionClient(config('graphiql.webSocketEndPoint'), {
+        reconnect: true
+    });
+
+    graphQLFetcher = window.GraphiQLSubscriptionsFetcher.graphQLFetcher(subscriptionsClient, graphQLFetcher);
 
     // Render <GraphiQL /> into the body.
     ReactDOM.render(

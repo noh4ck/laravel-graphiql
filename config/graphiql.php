@@ -28,4 +28,6 @@ return [
         'Accept' => 'application/json',
         'Content-Type' => 'application/json',
     ],
+
+    'webSocketEndPoint' => 'ws://localhost:8888'
 ];
