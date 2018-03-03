@@ -45,18 +45,22 @@
       cursor:pointer;
     }
   </style>
-  <link rel="stylesheet" href="{{config('graphiql.paths.assets_public')}}/graphiql.css" />
-  <!-- <script src="//cdn.jsdelivr.net/fetch/0.9.0/fetch.min.js"></script> -->
-  <script>window.fetch || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/fetch.min.js">\x3C/script>')</script>
-  <!-- <script src="//cdn.jsdelivr.net/react/15.0.1/react.min.js"></script> -->
-  <script>window.React || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react-15.0.1.min.js">\x3C/script>')</script>
-  <!-- <script src="//cdn.jsdelivr.net/react/15.0.1/react&#45;dom.min.js"></script> -->
-  <script>window.ReactDOM || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react-dom-15.0.1.min.js">\x3C/script>')</script>
 
+  <link rel="stylesheet" href="{{config('graphiql.paths.assets_public')}}/graphiql.css" />
+
+  {{--<script src="https://cdn.jsdelivr.net/gh/github/fetch@0.9.0/fetch.min.js"></script>--}}
+  <script>window.fetch || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/fetch.min.js">\x3C/script>')</script>
+  {{--<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>--}}
+  <script>window.React || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react.min.js">\x3C/script>')</script>
+  {{--<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>--}}
+  <script>window.ReactDOM || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react-dom.min.js">\x3C/script>')</script>
   <script src="//unpkg.com/subscriptions-transport-ws@0.5.4/browser/client.js"></script>
+  <script>window.SubscriptionsTransportWs || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/subscriptions.js">\x3C/script>')</script>
   <script src="//unpkg.com/graphiql-subscriptions-fetcher@0.0.2/browser/client.js"></script>
+  <script>window.GraphiQLSubscriptionsFetcher || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/graphiql-subscriptions.js">\x3C/script>')</script>
 
   <script src="{{config('graphiql.paths.assets_public')}}/graphiql.js"></script>
+
 </head>
 <body>
 <div class="jwt-token">
@@ -163,7 +167,7 @@
         });
     }
 
-    var subscriptionsClient = new window.SubscriptionsTransportWs.SubscriptionClient(config('graphiql.webSocketEndPoint'), {
+    var subscriptionsClient = new window.SubscriptionsTransportWs.SubscriptionClient("{{config('graphiql.webSocketEndPoint')}}" , {
         reconnect: true
     });
 

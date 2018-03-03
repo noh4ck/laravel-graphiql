@@ -29,5 +29,5 @@ return [
         'Content-Type' => 'application/json',
     ],
 
-    'webSocketEndPoint' => 'ws://localhost:8888'
+    'webSocketEndPoint' => 'ws://localhost:8888/subscriptions'
 ];
