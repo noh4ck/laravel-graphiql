@@ -14,19 +14,14 @@ Add this to your `composer.json` file:
 
 or run `composer require "noh4ck/graphiql:@dev"`
 
-##### Laravel >= 5.5
-
-Automatic package discovery will register the provider and publish the assets automatically.
-
-##### Laravel < 5.5
-
-Open your `config/app.php` and add this line in `providers` section:
+If you have Laravel 5.5 or above, automatic package discovery will register the provider automatically.
+If not, open your `config/app.php` and add this line in the `providers` section:
 
 ```php
 Graphiql\GraphiqlServiceProvider::class
 ```
 
-Then run `artisan graphiql:publish` to publish the assets and configuration file.
+Then run `artisan graphiql:publish` to publish the assets and the configuration file.
 
 ## Usage
 
