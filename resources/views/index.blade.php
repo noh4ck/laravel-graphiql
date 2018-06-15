@@ -24,10 +24,10 @@
     <!-- <script src="//cdn.jsdelivr.net/fetch/0.9.0/fetch.min.js"></script> -->
     <script>window.fetch || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/fetch.min.js">\x3C/script>')</script>
     <!-- <script src="//cdn.jsdelivr.net/react/15.0.1/react.min.js"></script> -->
-    <script>window.React || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react-15.0.1.min.js">\x3C/script>')</script>
+    <script>window.React || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react-15.4.2.min.js">\x3C/script>')</script>
     <!-- <script src="//cdn.jsdelivr.net/react/15.0.1/react&#45;dom.min.js"></script> -->
-    <script>window.ReactDOM || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react-dom-15.0.1.min.js">\x3C/script>')</script>
-    <script src="{{config('graphiql.paths.assets_public')}}/graphiql.js"></script>
+    <script>window.ReactDOM || document.write('<script src="{{config('graphiql.paths.assets_public')}}/vendor/react-dom-15.4.2.min.js">\x3C/script>')</script>
+    <script src="{{config('graphiql.paths.assets_public')}}/graphiql.min.js"></script>
   </head>
   <body>
     <div id="graphiql">Loading...</div>

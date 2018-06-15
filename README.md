@@ -1,6 +1,8 @@
-# Graphiql for Laravel
+# GraphiQL for Laravel
 
-This package provides an easy way to include the [graphiql ui](https://github.com/graphql/graphiql) within your laravel project.
+This package provides an easy way to include the [GraphiQL UI](https://github.com/graphql/graphiql) within your laravel project.
+
+Current included version: `0.11.11` 
 
 ## Installation
 
